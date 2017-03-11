@@ -10,7 +10,6 @@ module.exports = {
     path: path.join(__dirname,'dist'),
     publicPath: "",
     filename: "index.js"
-    //chunkFilename: "[id].chunk.js"
   },
   module: {
     loaders: [
