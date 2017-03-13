@@ -20,7 +20,7 @@ export default class EmpOption extends Component {
             <div className="opts">
 
                 <label><input type="checkbox" 
-                    checked={this.props.checkedCount===this.props.count ? 'true' : this.props.isCheckedAll} 
+                    checked={this.props.isCheckedAll} 
                     onChange={this.handlerCheckedAll.bind(this)}  /> 全选</label>
 
                 <span>已选{this.props.checkedCount} / {this.props.count}</span>
