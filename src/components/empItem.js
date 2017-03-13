@@ -3,6 +3,7 @@
 import React, {Component} from 'react' 
 import ReactDOM from 'react-dom'
 
+
 /**
  * 雇员item
  */
@@ -24,17 +25,30 @@ export default class empItem extends Component {
     handlerDelete(){
         this.props.delete(this.props.index);
     }
-    
 
+    //是否选中
+    handlerChecked(){
+        //console.log(this.props.isChecked)
+        let isChecked = !this.props.isChecked;
+        this.props.changeChecked(this.props.index, isChecked);
+    }
+    
+    
     render() {
 
         return( 
             <li className="item flexRow">
 
+                <input type="checkbox" checked={this.props.isChecked} onChange={this.handlerChecked.bind(this)} />
                 
-                <input ref="input" type="text" defaultValue={this.props.v.name} disabled={this.props.v.disabled}  />
+                <span>{this.props.index+1}</span>
 
-                <button data="3" className={this.props.v.disabled==true ? 'btn hide' : 'btn'} 
+                {
+                    this.props.v.disabled===true ?  <p>{this.props.v.name}</p> : 
+                    <input ref="input" type="text"  defaultValue={this.props.v.name} disabled={this.props.v.disabled}  />
+                }
+
+                <button className={this.props.v.disabled==true ? 'btn hide' : 'btn'} 
                     onClick={this.handlerSave.bind(this)} >保存</button>
 
                 <button className={this.props.v.disabled==true ? 'btn' : 'btn hide'}

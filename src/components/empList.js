@@ -27,6 +27,7 @@ export default class EmpList extends Component {
                         return <EmpItem 
                             key={index} 
                             v={item}
+                            isChecked={item.isChecked}
                             index={index} 
                             {...this.props}
                         />
