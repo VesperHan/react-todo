@@ -601,7 +601,8 @@ ES6下，有两种写法：
 	        )
 	    },·
 	}
-               
+        
+	
 ## 参考  
 [React's official site](https://facebook.github.io/react/)  
 [React on ES6+](https://babeljs.io/blog/2015/06/07/react-on-es6-plus)
