@@ -85,7 +85,6 @@ JSX 是一个看起来很像 XML 的 JavaScript 语法扩展
 
 JSX并不是React必须使用的，但React官方建议我们使用 JSX , 因为它能定义简洁且我们熟知的包含属性的树状结构语法
     
-
 **Usage:**  
 	
 	//使用JSX
